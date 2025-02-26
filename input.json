@@ -1,0 +1,26 @@
+{
+    "ServiceName": "getOnlyService",
+    "SourceConfiguration": {
+        "AuthenticationConfiguration": {
+            "ConnectionArn": "arn:aws:apprunner:us-west-2:699021122737:connection/GithubConnectionPdxGamma/beee02d10b154501a555bea06cf1625f"
+        },
+        "AutoDeploymentsEnabled": false,
+        "CodeRepository": {
+            "RepositoryUrl": "https://github.com/tongjusamazon/5xxbugbash",
+            "SourceCodeVersion": {
+                "Type": "BRANCH",
+                "Value": "master"
+            },
+            "CodeConfiguration": {
+                "ConfigurationSource": "API",
+                "CodeConfigurationValues": {
+                    "Runtime": "PYTHON_3",
+                    "BuildCommand": "pip install -r requirements.txt",
+                    "StartCommand": "python server_GET.py",
+                    "Port": "8080"
+                }
+            }
+        }
+    }
+}
+
