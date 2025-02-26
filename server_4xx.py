@@ -5,7 +5,8 @@ import os
 import random
 
 def hello_world(request):
-    
+    error_codes = [400, 401, 403, 404, 429]
+    status_code = random.choice(error_codes)
     return Response(status_code=500, body="500 Internal Server Error, thrown on purpose")
     
     # Normal response
