@@ -5,13 +5,8 @@ import os
 import random
 
 def hello_world(request):
-    chance = random.random()
-    if chance < 0.3:  # 30% chance of generating a 5xx error
-        return Response(status_code=500, body="500 Internal Server Error, thrown on purpose")
-    elif chance < 0.6:  # 30% chance of generating a 4xx error
-        error_codes = [400, 401, 403, 404, 429]
-        status_code = random.choice(error_codes)
-        return Response(status_code=status_code, body=f"{status_code} error, thrown on purpose")
+    
+    return Response(status_code=500, body="500 Internal Server Error, thrown on purpose")
     
     # Normal response
     name = os.environ.get('NAME', 'world')
